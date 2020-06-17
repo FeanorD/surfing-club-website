@@ -4,55 +4,35 @@
       <span class="subtitle">Shop</span>
       Surfboards
     </h2>
-    <div class="shop-slider">
-      <div class="board">
-        <div class="board__img-holder">
-          <img class="board__img" src="img/boards/board-1.png" alt="Surfboard">
-        </div>
+  </div>
 
-        <div class="board-desc">
-          <div class="board__category">Funboards</div>
-          <div class="board__title">Chilli Rare Bird</div>
-          <div class="board-buy">
-            <div class="board-buy__price">$890</div>
-            <div class="board-buy__link">Buy</div>
-          </div>
-        </div>
+  <div class="container shop-slider-wrapper">
+    <div class="shop-slider-special-holder">
+      <div id="shopSlider" class="owl-carousel">
 
-      </div>
-      <div class="board">
-        <div class="board__img-holder">
-          <img class="board__img" src="img/boards/board-2.png" alt="Surfboard">
-        </div>
-
-        <div class="board-desc">
-          <div class="board__category">Surfboards</div>
-          <div class="board__title">Emery NEM XF</div>
-          <div class="board-buy">
-            <div class="board-buy__price">$950</div>
-            <div class="board-buy__link">Buy</div>
-          </div>
-        </div>
-
-      </div>
-      <div class="board">
-        <div class="board__img-holder">
-          <img class="board__img" src="img/boards/board-3.png" alt="Surfboard">
-        </div>
-
-        <div class="board-desc">
-          <div class="board__category">Funboards</div>
-          <div class="board__title">Agency GROM</div>
-          <div class="board-buy">
-            <div class="board-buy__price">$670</div>
-            <div class="board-buy__link">Buy</div>
-          </div>
-        </div>
+        @@include('shop-items/item-01.html')
+        @@include('shop-items/item-02.html')
+        @@include('shop-items/item-03.html')
 
       </div>
     </div>
+  </div>
+
+  <div class="container">
+    <div class="shop-slider-controls">
+      <div id="shopSliderLeft" class="shop-slider-arrow shop-slider-left">
+        <img src="./img/controls/boards-left.svg" alt="Prev">
+      </div>
+      <div id="shopSliderRight" class="shop-slider-arrow shop-slider-right">
+        <img src="./img/controls/boards-right.svg" alt="Next">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
     <div class="shop-link-wrapper">
       <a href="#" class="read-more-link">Show All</a>
     </div>
   </div>
+
 </section>
