@@ -1,0 +1,25 @@
+.social {
+  display: flex;
+  justify-content: center;
+
+  &--vertical {
+    flex-direction: column;
+    width: 20px;
+    align-items: center;
+  }
+}
+
+.social__item {
+  margin-right: 15px;
+  margin-left: 15px;
+
+  .social--vertical & {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 35px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
