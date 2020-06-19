@@ -8,7 +8,6 @@ $(document).ready(function(){
 
   headerSlider.owlCarousel({
     items: 1,
-    autoplay: true,
     dots: false,
     smartSpeed: 1200,
     autoplayTimeout: 2000,
