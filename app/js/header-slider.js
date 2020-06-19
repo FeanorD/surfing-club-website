@@ -8,10 +8,10 @@ $(document).ready(function(){
 
   headerSlider.owlCarousel({
     items: 1,
-    // loop: true,
+    autoplay: true,
     dots: false,
     smartSpeed: 1200,
-    autoplayTimeout:2000,
+    autoplayTimeout: 2000,
   });
 
   $('#headerSliderRight').click(function() {
