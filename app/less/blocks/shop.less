@@ -1,8 +1,12 @@
 .shop {
-  padding-top: 95px;
-  padding-bottom: 110px;
-
+  padding-top: 95px/2;
+  padding-bottom: 110px/2;
   position: relative;
+
+  @media (min-width: 1254px) {
+    padding-top: 95px;
+    padding-bottom: 110px;
+  }
 
   &::after {
     content: "";
@@ -27,7 +31,11 @@
 .shop-slider-special-holder {
   position: absolute;
   left: 0;
-  right: -85px;
+  right: 0;
+
+  @media (min-width: 1394px) {
+    right: -85px;
+  }
 }
 
 .shop-slider {
@@ -43,10 +51,21 @@
 
 .board {
   position: relative;
-  width: 350px;
+  width: 250px;
   height: 435px;
   margin-top: 130px;
+  margin-left: auto;
+  margin-right: auto;
 
+  @media (min-width: 650px) {
+    --padding-left: 185px;
+    width: calc(var(--padding-left) + 435px);
+  }
+
+  @media (min-width: 1254px) {
+    margin-left: 0;
+    --padding-left: 0;
+  }
 }
 
 .shop-slider-controls {
@@ -60,7 +79,11 @@
   position: absolute;
   z-index: 9;
   cursor: pointer;
-  bottom: calc(140px + 80px);
+  bottom: 140px;
+
+  @media (min-width: 650px) {
+    bottom: calc(140px + 80px);
+  }
 
   img {
     vertical-align: top;
@@ -68,13 +91,31 @@
 }
 
 .shop-slider-left {
-  left: -70px;
-  transform: translate(-100%,0);
+  left: -15px;
+
+  @media (min-width: 650px) {
+    transform: translate(100%,0);
+    left: 0;
+  }
+
+  @media (min-width: 1334px) {
+    left: 0;
+    transform: translate(-100%, 0);
+  }
 }
 
 .shop-slider-right {
-  right: -70px;
-  transform: translate(100%,0);
+  right: -15px;
+
+  @media (min-width: 650px) {
+    transform: translate(-100%,0);
+    right: 0;
+  }
+
+  @media (min-width: 1334px) {
+    right: 0;
+    transform: translate(100%, 0%);
+  }
 }
 
 .board__img-holder {
@@ -84,6 +125,15 @@
   width: 250px;
   height: 320px;
   background-color: #ececec;
+
+  @media (min-width: 650px) {
+    left: 185px;
+  }
+
+  @media (min-width: 1254px) {
+    left: 0;
+  }
+
 }
 
 .board__img {
@@ -102,7 +152,19 @@
   width: 210px;
   position: absolute;
   top: 196px;
-  left: 216px;
+  right: 0;
+  z-index: 9;
+  text-align: right;
+  
+  @media (min-width: 650px) {
+    right: auto;
+    left: 216px + 185px;
+    text-align: left;
+  }
+
+  @media (min-width: 1254px) {
+    left: 216px;
+  }
 }
 
 .board__category {

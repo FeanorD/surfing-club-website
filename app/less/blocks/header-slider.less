@@ -5,6 +5,24 @@
   padding-bottom: 95px;
 }
 
+.header-social-wrapper {
+  margin-bottom: 25px;
+  margin-top: 25px;
+
+  @media (min-width: 1254px) {
+    position: absolute;
+    width: 20px;
+    right: 30px;
+    top: 350px;
+    z-index: 9;
+  }
+
+  @media (min-width: 1400px) {
+    right: -45px;
+    top: 400px;
+  }
+}
+
 #headerSlider.owl-carousel {
  .owl-stage-outer {
    overflow: visible;
@@ -18,21 +36,48 @@
 }
 
 .slide-item__desc {
-  width: 500px;
+  background-color: #fff;
+  padding: 25px;
+  padding-bottom: 10px;
+  min-width: 260px;
+  max-width: 680px;
   position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  box-shadow: -16px 0px 65px rgba(11, 12, 17, 0.2);
+
+  @media (min-width: 1254px) {
+    background-color: transparent;
+    text-align: left;
+    padding: 0;
+    width: 500px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    box-shadow: none;
+  }
 }
 
 .slide-item__heading {
-  //text-shadow: 0px 3px 35px rgba(0, 0, 0, 0.39);
   font-family: 'Playfair Display', serif;
-  font-size: 62px;
   font-weight: 700;
-  line-height: 64px;
+  font-size: 22px;
   color: #0b0c11;
-  margin-bottom: 18px;
+  line-height: 1;
+  margin-bottom: 10px;
+
+  @media (min-width: 920px) {
+    font-size: 42px;
+  }
+
+  @media (min-width: 1254px) {
+    font-size: 62px;
+    line-height: 64px;
+    margin-bottom: 18px;
+  }
 
   span {
     display: block;
@@ -43,19 +88,31 @@
     letter-spacing: 5.4px;
     text-transform: uppercase;
     color: rgba(93, 168, 239, 0.9);
-    margin-bottom: 18px;
+    margin-bottom: 10px;
+
+    @media (min-width: 1254px) {
+      margin-bottom: 18px;
+    }
   }
 }
 
 .slide-item__text {
-  width: 390px;
   .desc-text;
+
+  @media (min-width: 992px) {
+    width: 390px;
+  }
 }
 
 .slide-item__img {
-  width: 1016px;
-  height: 572px;
+  width: 100%;
+  height: 372px;
   box-shadow: -15.9px 25.4px 65px 0 rgba(11, 12, 17, 0.2);
+
+  @media (min-width: 1254px) {
+    width: 1016px;
+    height: 572px;
+  }
 }
 
 .slide-item__img--bg-1 {
@@ -63,14 +120,21 @@
 }
 
 .slide-controls {
-  width: 81px;
   position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 350%);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  left: 0;
-  bottom: 0;
   z-index: 9;
+
+  width: 81px;
+
+  @media(min-width: 1254px) {
+    left: 0;
+    transform: translate(0%, 0%);
+  }
 
   img {
     vertical-align: middle;

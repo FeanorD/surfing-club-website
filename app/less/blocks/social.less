@@ -1,19 +1,26 @@
 .social {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
 
-  &--vertical {
+.social.social--header {
+  //flex-direction: row;
+  //
+  //width: 20px;
+
+  @media (min-width: 1254px) {
     flex-direction: column;
-    width: 20px;
-    align-items: center;
   }
 }
 
 .social__item {
   margin-right: 15px;
   margin-left: 15px;
+}
 
-  .social--vertical & {
+.social--header .social__item {
+  @media (min-width: 1254px) {
     margin-right: 0;
     margin-left: 0;
     margin-bottom: 35px;

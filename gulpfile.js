@@ -64,4 +64,5 @@ function html() {
 }
 
 exports.styles = styles
+exports.html = html
 exports.default = series(styles, server)
